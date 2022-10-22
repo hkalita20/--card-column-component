@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+:root{ 
+    --orange:hsl(31, 77%, 52%);
+    --light-cyan:hsl(184, 100%, 22%);
+    --dark-cyan:hsl(179, 100%, 13%);
+    --transper:hsl(0, 0%, 95%);
+    --light-gray:hsla(0, 0%, 100%, 0.75);
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size:15px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--light-gray);
+    background-color:  var(--transper);
+}
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--transper);
+}
+.container{
+    
+    margin: 5rem 1.5rem;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 10px;
+    /* border:2px solid; */
+    overflow: hidden;
+}
+
+.box{
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 37px 20px 30px;
+    /* border: 2px solid; */
+}
+
+.sedan{
+    background-color: var(--orange);
+}
+
+.suv{
+    background-color: var(--light-cyan);
+}
+
+.luxury{
+    background-color: var(--dark-cyan);
+}
+
+
+.box a{
+    text-decoration: none;
+}
+.box a:hover{
+    color: var(--transper);
+}
+
+.box.sedan button{
+    color:var(--orange);
+}
+.box.suv button{
+    color:var(--light-cyan);
+}
+.box.luxury button{
+    color:var(--dark-cyan);
+}
+
+
+.learn-more-button{
+    border: 2px solid  var(--transper);
+    padding: 10px;
+    font-weight: 700;
+    background-color:  var(--transper);
+    border-radius: 50px;
+    margin:35px 0 37px;
+    font-size: 15px;
+    width: fit-content;
+}
+
+.learn-more-button:hover{
+    cursor: pointer;
+}
+
+.suv .learn-more-button:hover{
+    background-color: var(--light-cyan);
+    color: var(--transper);
+}
+.sedan .learn-more-button:hover{
+    background-color: var(--orange);
+    color: var(--transper);
+}
+.luxury .learn-more-button:hover{
+    background-color: var(--dark-cyan);
+    color: var(--transper);
+}
+
+
+@media only screen and (min-width:760px){
+    .container{
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+        max-width: 63rem;
+    }
+    .box{
+        height:33.7rem;
+    }
+    
+    .learn-more-button{
+        padding: 10px 30px;
+        position: absolute;
+        bottom:5rem;
+    }
+}
+
+
+@media only screen and (min-width:1061px){
+    .container{
+        margin: 7rem auto;
+    }
+}
+
+@media only screen and (max-width:223px){
+    .box {
+        padding: 20px;
+    }
+    .container{
+        margin: 5rem 0.5rem;
+    }
+}
